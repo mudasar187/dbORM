@@ -8,6 +8,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Properties;
 
+/**
+ * <p>DBOrmConnection class.</p>
+ *
+ * @author mudasar
+ * @version $Id: $Id
+ */
 public class DBOrmConnection {
 
     private String hostName;
@@ -18,6 +24,11 @@ public class DBOrmConnection {
     private Properties props;
     private String url;
 
+    /**
+     * <p>Constructor for DBOrmConnection.</p>
+     *
+     * @param properties a {@link java.lang.String} object.
+     */
     public DBOrmConnection(String properties) {
 
         try
@@ -37,6 +48,11 @@ public class DBOrmConnection {
         }
     }
 
+    /**
+     * <p>getConnection.</p>
+     *
+     * @return a {@link com.j256.ormlite.support.ConnectionSource} object.
+     */
     public ConnectionSource getConnection()
     {
         url = "jdbc:mysql://" + hostName + ":" + port + "/" + dbName;

@@ -5,23 +5,44 @@ import com.j256.ormlite.table.DatabaseTable;
 
 import java.io.Serializable;
 
+/**
+ * <p>Country class.</p>
+ *
+ * @author mudasar
+ * @version $Id: $Id
+ */
 @DatabaseTable(tableName = "Country")
 public class Country implements Serializable {
 
+    /** Constant <code>ID_FIELD="Code"</code> */
     public static final String ID_FIELD = "Code";
+    /** Constant <code>NAME_FIELD="Name"</code> */
     public static final String NAME_FIELD = "Name";
+    /** Constant <code>CONTINENT_FIELD="Continent"</code> */
     public static final String CONTINENT_FIELD = "Continent";
+    /** Constant <code>REGION_FIELD="Region"</code> */
     public static final String REGION_FIELD = "Region";
+    /** Constant <code>SURFACEAREA_FIELD="SurfaceArea"</code> */
     public static final String SURFACEAREA_FIELD = "SurfaceArea";
+    /** Constant <code>INDEPYEAR_FIELD="IndepYear"</code> */
     public static final String INDEPYEAR_FIELD = "IndepYear";
+    /** Constant <code>POPULATION_FIELD="Population"</code> */
     public static final String POPULATION_FIELD = "Population";
+    /** Constant <code>LIFEEXPECTANCY_FIELD="LifeExpectancy"</code> */
     public static final String LIFEEXPECTANCY_FIELD = "LifeExpectancy";
+    /** Constant <code>GNP_FIELD="GNP"</code> */
     public static final String GNP_FIELD = "GNP";
+    /** Constant <code>GNPOLD_FIELD="GNPOld"</code> */
     public static final String GNPOLD_FIELD = "GNPOld";
+    /** Constant <code>LOCALNAME_FIELD="LocalName"</code> */
     public static final String LOCALNAME_FIELD = "LocalName";
+    /** Constant <code>GOVERNEMENTFORM_FIELD="GovernmentForm"</code> */
     public static final String GOVERNEMENTFORM_FIELD = "GovernmentForm";
+    /** Constant <code>HEADOFSTATE_FIELD="HeadOfState"</code> */
     public static final String HEADOFSTATE_FIELD = "HeadOfState";
+    /** Constant <code>CAPITAL_FIELD="Capital"</code> */
     public static final String CAPITAL_FIELD = "Capital";
+    /** Constant <code>CODE2_FIELD="Code2"</code> */
     public static final String CODE2_FIELD = "Code2";
 
 
@@ -71,104 +92,468 @@ public class Country implements Serializable {
     private String code2;
 
 
+    /**
+     * <p>Constructor for Country.</p>
+     */
     public Country() {
         // all persisted classes must define a no-arg constructor with at least package visibility
     }
 
-    public static String getIdField() { return ID_FIELD; }
+    /**
+     * <p>getIdField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getIdField() {
 
-    public static String getNameField() { return NAME_FIELD; }
+        return ID_FIELD;
+    }
 
-    public static String getContinentField() { return CONTINENT_FIELD; }
+    /**
+     * <p>getNameField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getNameField() {
 
-    public static String getRegionField() { return REGION_FIELD; }
+        return NAME_FIELD;
+    }
 
-    public static String getSurfaceareaField() { return SURFACEAREA_FIELD; }
+    /**
+     * <p>getContinentField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getContinentField() {
 
-    public static String getIndepyearField() { return INDEPYEAR_FIELD; }
+        return CONTINENT_FIELD;
+    }
 
-    public static String getPopulationField() { return POPULATION_FIELD; }
+    /**
+     * <p>getRegionField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getRegionField() {
 
-    public static String getLifeexpectancyField() { return LIFEEXPECTANCY_FIELD; }
+        return REGION_FIELD;
+    }
 
-    public static String getGnpField() { return GNP_FIELD; }
+    /**
+     * <p>getSurfaceareaField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getSurfaceareaField() {
 
-    public static String getGnpoldField() { return GNPOLD_FIELD; }
+        return SURFACEAREA_FIELD;
+    }
 
-    public static String getLocalnameField() { return LOCALNAME_FIELD; }
+    /**
+     * <p>getIndepyearField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getIndepyearField() {
 
-    public static String getGovernementformField() { return GOVERNEMENTFORM_FIELD; }
+        return INDEPYEAR_FIELD;
+    }
 
-    public static String getHeadofstateField() { return HEADOFSTATE_FIELD; }
+    /**
+     * <p>getPopulationField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getPopulationField() {
 
-    public static String getCapitalField() { return CAPITAL_FIELD; }
+        return POPULATION_FIELD;
+    }
 
-    public static String getCode2Field() { return CODE2_FIELD; }
+    /**
+     * <p>getLifeexpectancyField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getLifeexpectancyField() {
 
-    public String getCode() { return code; }
+        return LIFEEXPECTANCY_FIELD;
+    }
 
-    public void setCode(String code) { this.code = code; }
+    /**
+     * <p>getGnpField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getGnpField() {
 
-    public String getName() { return name; }
+        return GNP_FIELD;
+    }
 
-    public void setName(String name) { this.name = name; }
+    /**
+     * <p>getGnpoldField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getGnpoldField() {
 
-    public String getContinent() { return continent; }
+        return GNPOLD_FIELD;
+    }
 
-    public void setContinent(String continent) { this.continent = continent; }
+    /**
+     * <p>getLocalnameField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getLocalnameField() {
 
-    public String getRegion() { return region; }
+        return LOCALNAME_FIELD;
+    }
 
-    public void setRegion(String region) { this.region = region; }
+    /**
+     * <p>getGovernementformField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getGovernementformField() {
 
-    public double getSurfaceArea() { return surfaceArea; }
+        return GOVERNEMENTFORM_FIELD;
+    }
 
-    public void setSurfaceArea(Double surfaceArea) { this.surfaceArea = surfaceArea; }
+    /**
+     * <p>getHeadofstateField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getHeadofstateField() {
 
-    public int getIndepYear() { return indepYear; }
+        return HEADOFSTATE_FIELD;
+    }
 
-    public void setIndepYear(int indepYear) { this.indepYear = indepYear; }
+    /**
+     * <p>getCapitalField.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getCapitalField() {
 
-    public int getPopulation() { return population; }
+        return CAPITAL_FIELD;
+    }
 
-    public void setPopulation(int population) { this.population = population; }
+    /**
+     * <p>getCode2Field.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public static String getCode2Field() {
 
-    public double getLifeExpectancy() { return lifeExpectancy; }
+        return CODE2_FIELD;
+    }
 
-    public void setLifeExpectancy(double lifeExpectancy) { this.lifeExpectancy = lifeExpectancy; }
+    /**
+     * <p>Getter for the field <code>code</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getCode() {
 
-    public double getGnp() { return gnp; }
+        return code;
+    }
 
-    public void setGnp(int gnp) { this.gnp = gnp; }
+    /**
+     * <p>Setter for the field <code>code</code>.</p>
+     *
+     * @param code a {@link java.lang.String} object.
+     */
+    public void setCode(String code) {
 
-    public double getGnpOld() { return gnpOld; }
+        this.code = code;
+    }
 
-    public void setGnpOld(int gnpOld) { this.gnpOld = gnpOld; }
+    /**
+     * <p>Getter for the field <code>name</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getName() {
 
-    public String getLocalName() { return localName; }
+        return name;
+    }
 
-    public void setLocalName(String localName) { this.localName = localName; }
+    /**
+     * <p>Setter for the field <code>name</code>.</p>
+     *
+     * @param name a {@link java.lang.String} object.
+     */
+    public void setName(String name) {
 
-    public String getGovernmentForm() { return governmentForm; }
+        this.name = name;
+    }
 
-    public void setGovernmentForm(String governmentForm) { this.governmentForm = governmentForm; }
+    /**
+     * <p>Getter for the field <code>continent</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getContinent() {
 
-    public String getHeadOfState() { return headOfState; }
+        return continent;
+    }
 
-    public void setHeadOfState(String headOfState) { this.headOfState = headOfState; }
+    /**
+     * <p>Setter for the field <code>continent</code>.</p>
+     *
+     * @param continent a {@link java.lang.String} object.
+     */
+    public void setContinent(String continent) {
 
-    public int getCapital() { return capital; }
+        this.continent = continent;
+    }
 
-    public void setCapital(int capital) { this.capital = capital; }
+    /**
+     * <p>Getter for the field <code>region</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getRegion() {
 
-    public String getCode2() { return code2; }
+        return region;
+    }
 
-    public void setCode2(String code2) { this.code2 = code2; }
+    /**
+     * <p>Setter for the field <code>region</code>.</p>
+     *
+     * @param region a {@link java.lang.String} object.
+     */
+    public void setRegion(String region) {
+
+        this.region = region;
+    }
+
+    /**
+     * <p>Getter for the field <code>surfaceArea</code>.</p>
+     *
+     * @return a double.
+     */
+    public double getSurfaceArea() {
+
+        return surfaceArea;
+    }
+
+    /**
+     * <p>Setter for the field <code>surfaceArea</code>.</p>
+     *
+     * @param surfaceArea a {@link java.lang.Double} object.
+     */
+    public void setSurfaceArea(Double surfaceArea) {
+
+        this.surfaceArea = surfaceArea;
+    }
+
+    /**
+     * <p>Getter for the field <code>indepYear</code>.</p>
+     *
+     * @return a int.
+     */
+    public int getIndepYear() {
+
+        return indepYear;
+    }
+
+    /**
+     * <p>Setter for the field <code>indepYear</code>.</p>
+     *
+     * @param indepYear a int.
+     */
+    public void setIndepYear(int indepYear) {
+
+        this.indepYear = indepYear;
+    }
+
+    /**
+     * <p>Getter for the field <code>population</code>.</p>
+     *
+     * @return a int.
+     */
+    public int getPopulation() {
+
+        return population;
+    }
+
+    /**
+     * <p>Setter for the field <code>population</code>.</p>
+     *
+     * @param population a int.
+     */
+    public void setPopulation(int population) {
+
+        this.population = population;
+    }
+
+    /**
+     * <p>Getter for the field <code>lifeExpectancy</code>.</p>
+     *
+     * @return a double.
+     */
+    public double getLifeExpectancy() {
+
+        return lifeExpectancy;
+    }
+
+    /**
+     * <p>Setter for the field <code>lifeExpectancy</code>.</p>
+     *
+     * @param lifeExpectancy a double.
+     */
+    public void setLifeExpectancy(double lifeExpectancy) {
+
+        this.lifeExpectancy = lifeExpectancy;
+    }
+
+    /**
+     * <p>Getter for the field <code>gnp</code>.</p>
+     *
+     * @return a double.
+     */
+    public double getGnp() {
+
+        return gnp;
+    }
+
+    /**
+     * <p>Setter for the field <code>gnp</code>.</p>
+     *
+     * @param gnp a int.
+     */
+    public void setGnp(int gnp) {
+
+        this.gnp = gnp;
+    }
+
+    /**
+     * <p>Getter for the field <code>gnpOld</code>.</p>
+     *
+     * @return a double.
+     */
+    public double getGnpOld() {
+
+        return gnpOld;
+    }
+
+    /**
+     * <p>Setter for the field <code>gnpOld</code>.</p>
+     *
+     * @param gnpOld a int.
+     */
+    public void setGnpOld(int gnpOld) {
+
+        this.gnpOld = gnpOld;
+    }
+
+    /**
+     * <p>Getter for the field <code>localName</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getLocalName() {
+
+        return localName;
+    }
+
+    /**
+     * <p>Setter for the field <code>localName</code>.</p>
+     *
+     * @param localName a {@link java.lang.String} object.
+     */
+    public void setLocalName(String localName) {
+
+        this.localName = localName;
+    }
+
+    /**
+     * <p>Getter for the field <code>governmentForm</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getGovernmentForm() {
+
+        return governmentForm;
+    }
+
+    /**
+     * <p>Setter for the field <code>governmentForm</code>.</p>
+     *
+     * @param governmentForm a {@link java.lang.String} object.
+     */
+    public void setGovernmentForm(String governmentForm) {
+
+        this.governmentForm = governmentForm;
+    }
+
+    /**
+     * <p>Getter for the field <code>headOfState</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getHeadOfState() {
+
+        return headOfState;
+    }
+
+    /**
+     * <p>Setter for the field <code>headOfState</code>.</p>
+     *
+     * @param headOfState a {@link java.lang.String} object.
+     */
+    public void setHeadOfState(String headOfState) {
+
+        this.headOfState = headOfState;
+    }
+
+    /**
+     * <p>Getter for the field <code>capital</code>.</p>
+     *
+     * @return a int.
+     */
+    public int getCapital() {
+
+        return capital;
+    }
+
+    /**
+     * <p>Setter for the field <code>capital</code>.</p>
+     *
+     * @param capital a int.
+     */
+    public void setCapital(int capital) {
+
+        this.capital = capital;
+    }
+
+    /**
+     * <p>Getter for the field <code>code2</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
+    public String getCode2() {
+
+        return code2;
+    }
+
+    /**
+     * <p>Setter for the field <code>code2</code>.</p>
+     *
+     * @param code2 a {@link java.lang.String} object.
+     */
+    public void setCode2(String code2) {
+
+        this.code2 = code2;
+    }
 
 
-
+    /** {@inheritDoc} */
     @Override
     public String toString() {
+
         return "Country{" +
                 "code='" + code + '\'' +
                 ", name='" + name + '\'' +

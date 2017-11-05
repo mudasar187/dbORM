@@ -16,58 +16,92 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <p>Read class.</p>
+ *
+ * @author mudasar
+ * @version $Id: $Id
+ */
 public class Read {
 
     private CityDao cityDao;
     private CountryDao countryDato;
 
+    /**
+     * <p>Constructor for Read.</p>
+     */
     public Read() {
+
         cityDao = new CityDao();
         countryDato = new CountryDao();
     }
 
+    /**
+     * <p>printEverythingInCity.</p>
+     */
     public void printEverythingInCity() {
-        try {
+
+        try
+        {
             List<City> cityList = cityDao.getCityDao().queryForAll();
 
-            int index = 4082;
-            while (index < 4084) {
-                System.out.println("Ex: " + cityList.get(index).toString());
+            int index = 0;
+            while (index < cityList.size())
+            {
+                System.out.println(cityList.get(index).toString());
                 index++;
             }
-        } catch (Exception e) {
-            System.out.println("Error occured: " + e.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error: " + e.getMessage());
         }
 
     }
 
-    public void print10LastElements() {
+    /**
+     * <p>print5LastElements.</p>
+     */
+    public void print5LastElements() {
+
         QueryBuilder<City, String> builder = cityDao.getCityDao().queryBuilder();
-        builder.limit((long) 10);
+        builder.limit((long) 5);
         builder.orderBy(City.ID_FIELD, false);
-        try {
+        try
+        {
             List<City> cityList = cityDao.getCityDao().query(builder.prepare());
-            for (City C: cityList) {
-                System.out.println("Ex: " + C.toString());
+            for (City C : cityList)
+            {
+                System.out.println(C.toString());
             }
-        } catch (Exception e) {
-            System.out.println("Error occured: " + e.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error: " + e.getMessage());
         }
 
     }
 
-    public void printEverythingCountry() {
-        try {
+    /**
+     * <p>print5FirstRowsInCountry.</p>
+     */
+    public void print5FirstRowsInCountry() {
+
+        try
+        {
             List<Country> countryList = countryDato.getCountryDao().queryForAll();
 
             int index = 0;
-            while (index < 5) {
-                System.out.println("Ex: " + countryList.get(index).toString());
+            while (index < 5)
+            {
+                System.out.println(countryList.get(index).toString());
                 index++;
             }
 
-        } catch (Exception e) {
-            System.out.println("Error occured: " + e.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
