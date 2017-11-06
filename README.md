@@ -7,6 +7,7 @@
 # Functionality
 
 * CRUD operations
+* RunCreate , RunDelete , RunRead, RunUpdate -> These methods is main methods, run these to see result of each operations
 
 # Settings
 
