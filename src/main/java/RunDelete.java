@@ -17,7 +17,7 @@ public class RunDelete {
 
         Delete delete = new Delete();
 
-        System.out.println("### Deleting all rows in all tables matching 'DZA' ...\n");
+        System.out.println("### Deleting all rows in all tables matching 'ABW' ...\n");
         delete.getCityByID("ABW");
         delete.getCountryByCode("ABW");
         delete.getCountryLanguageByCountryCode("ABW");
